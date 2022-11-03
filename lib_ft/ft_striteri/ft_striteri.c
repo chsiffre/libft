@@ -1,39 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_substr.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: charles <charles@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/11/02 14:46:30 by charles           #+#    #+#             */
-/*   Updated: 2022/11/02 14:48:54 by charles          ###   ########.fr       */
+/*   Created: 2022/11/03 13:20:51 by charles           #+#    #+#             */
+/*   Updated: 2022/11/03 13:21:14 by charles          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
-
-
-char *ft_substr(char const *s, unsigned int start,size_t len)
+void ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
-	char *dest;
 	unsigned int i;
 
-	i = -1;
-	dest = malloc((len + 1) * sizeof(char));
-	if (!dest)
-		return (NULL);
-	while(++i < len)
-		dest[i] = s[start + i]; 
-	dest[i] = '\0';
-	return (dest);
-}
-
-int main()
-{
-	char *s = "bonjour les enfants";
-	unsigned int start = 12;
-	char *tab = ft_substr(s, start, 12);
-	printf("%s", tab);
-	free(tab);
+	i = 0;
+	while(s[i])
+		s[i++] = f(i, &s[i]);
 }
