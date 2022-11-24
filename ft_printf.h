@@ -6,7 +6,7 @@
 /*   By: chsiffre <chsiffre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 14:25:48 by chsiffre          #+#    #+#             */
-/*   Updated: 2022/11/19 11:23:23 by chsiffre         ###   ########.fr       */
+/*   Updated: 2022/11/24 13:44:01 by chsiffre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@
 # include <stdarg.h>
 # include <unistd.h>
 # include <stdlib.h>
+# include "libft.h"
 
-size_t		ft_strlen(char *s);
 int			ft_putstr(char *s);
 int			ft_putchar(int c);
 int			ft_conv_hex(long int c, char *base);

@@ -6,21 +6,12 @@
 /*   By: chsiffre <chsiffre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/12 15:03:10 by chsiffre          #+#    #+#             */
-/*   Updated: 2022/11/19 11:28:03 by chsiffre         ###   ########.fr       */
+/*   Updated: 2022/11/24 13:42:45 by chsiffre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-
-size_t	ft_strlen(char *s)
-{
-	size_t	i;
-
-	i = 0;
-	while (s[i])
-		i++;
-	return (i);
-}
+#include "libft.h"
 
 int	ft_putstr(char *s)
 {

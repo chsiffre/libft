@@ -6,7 +6,7 @@
 /*   By: chsiffre <chsiffre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 12:27:48 by chsiffre          #+#    #+#             */
-/*   Updated: 2022/11/24 12:21:20 by chsiffre         ###   ########.fr       */
+/*   Updated: 2022/11/24 13:23:59 by chsiffre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,14 @@ char	*ft_read(char *buff_s, int fd)
 	nb_char = 1;
 	buff_t = NULL;
 	if (buff_s)
-		buff_t = ft_strjoin(buff_t, buff_s);
-	while (!ft_strchr(buff_s, '\n') && nb_char > 0)
+		buff_t = ft_strjoin_2(buff_t, buff_s);
+	while (!ft_strchr_2(buff_s, '\n') && nb_char > 0)
 	{
 		nb_char = read(fd, buff_s, BUFFER_SIZE);
 		if (nb_char == -1)
 			return (NULL);
 		buff_s[nb_char] = '\0';
-		buff_t = ft_strjoin(buff_t, buff_s);
+		buff_t = ft_strjoin_2(buff_t, buff_s);
 	}
 	return (buff_t);
 }

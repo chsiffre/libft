@@ -6,7 +6,7 @@
 /*   By: chsiffre <chsiffre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 13:36:44 by chsiffre          #+#    #+#             */
-/*   Updated: 2022/11/19 13:37:40 by chsiffre         ###   ########.fr       */
+/*   Updated: 2022/11/24 13:21:23 by chsiffre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,9 @@
 # endif
 
 char	*get_next_line(int fd);
-size_t	ft_strlen(const char *s);
-char	*ft_strjoin(char *s1, char *s2);
-char	*ft_strchr(char *s, int c);
+size_t	ft_strlen_2(const char *s);
+char	*ft_strjoin_2(char *s1, char *s2);
+char	*ft_strchr_2(char *s, int c);
 char	*ft_read(char *buff_s, int fd);
 void	ft_setup_next_line(char *line, char *buffer_s, int start);
 char	*ft_set_line(char *line, char *buff_s);

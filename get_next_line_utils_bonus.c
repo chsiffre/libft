@@ -6,13 +6,13 @@
 /*   By: chsiffre <chsiffre@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/11/19 12:27:50 by chsiffre          #+#    #+#             */
-/*   Updated: 2022/11/24 12:21:31 by chsiffre         ###   ########.fr       */
+/*   Updated: 2022/11/24 13:24:44 by chsiffre         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "get_next_line_bonus.h"
 
-size_t	ft_strlen(const char *s)
+size_t	ft_strlen_2(const char *s)
 {
 	size_t	i;
 
@@ -24,13 +24,13 @@ size_t	ft_strlen(const char *s)
 	return (i);
 }
 
-char	*ft_strjoin(char *s1, char *s2)
+char	*ft_strjoin_2(char *s1, char *s2)
 {	
 	char	*ret;
 	size_t	i;
 	ssize_t	j;
 
-	ret = malloc((ft_strlen(s1) + ft_strlen(s2) + 1) * sizeof(char));
+	ret = malloc((ft_strlen_2(s1) + ft_strlen_2(s2) + 1) * sizeof(char));
 	if (!ret)
 		return (NULL);
 	i = 0;
@@ -48,7 +48,7 @@ char	*ft_strjoin(char *s1, char *s2)
 	return (ret);
 }
 
-char	*ft_strchr(char *s, int c)
+char	*ft_strchr_2(char *s, int c)
 {
 	int	i;
 
